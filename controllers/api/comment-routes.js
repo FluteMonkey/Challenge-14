@@ -5,7 +5,7 @@ const {
     Comment
 } = require('../../models');
 
-const withAuth = require('../../utils/auth');
+const withAuth = require('../../util/auth');
 
 //get comments
 router.get("/", (req, res) => {
