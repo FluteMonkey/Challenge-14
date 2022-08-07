@@ -2,7 +2,7 @@ const {
     Model,
     DataTypes
 } = require('sequelize');
-const { UPSERT } = require('sequelize/types/query-types');
+//const { UPSERT } = require('sequelize/types/query-types');
 
 const sequelize = require('../config/connection');
 

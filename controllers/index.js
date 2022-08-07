@@ -1,7 +1,12 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const {
-    User,
-    Post,
-    Comment
-} = require('../models');
+const apiRoutes = require('./api');
+
+
+router.use('/api', apiRoutes);
+
+router.use((req, res) => {
+    res.status(404).end();
+});
+
+
+module.exports = router;
