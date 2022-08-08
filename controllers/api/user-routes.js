@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
             res.status(500).json(err);
         });
 });
+
 //get user by id
 router.get('/:id', (req, res) => {
     User.findOne({
@@ -55,6 +56,7 @@ router.get('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
 //add user
 router.post('/', (req, res) => {
     User.create({
@@ -101,7 +103,7 @@ router.post('/login', (req, res) => {
                 });
             });
 
-            const validPassword = dbUserData.checkPassword(req.body.password);
+           const validPassword = dbUserData.checkPassword(req.body.password);
 
             if (!validPassword) {
                 res.status(400).json({
@@ -134,4 +136,4 @@ router.post('/logout', (req, res) => {
 
 });
 
-module.exports = router
+module.exports = router;
